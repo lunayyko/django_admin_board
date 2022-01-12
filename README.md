@@ -12,28 +12,23 @@ git clone https://github.com/lunayyko/django_admin_board.git
 SECRET_KEY = '랜덤한 특정 문자열'
 ```
 
-3. 가상환경을 만들고 실행한다(미니콘다 설치 필요)
+3.마이그레이션을 통해 데이터베이스를 생성한다.
 ```bash
-conda create -n cloudnine python=3.8
-conda activate cloudnine
+python manage.py makemigrations
+python manage.py migrate
 ```
 
-4. 라이브러리들을 설치한다
-```python
-pip install -r requirements.txt 
-```
-
-5. 유저를 생성한다
+4. 유저를 생성한다
 ```python
 python manage.py createsuperuser
 ```
 
-6. 서버를 실행한다(파이썬 설치 필요)
+5. 서버를 실행한다(파이썬 설치 필요)
 ```python
 python manage.py runserver
 ```
 
-7. localhost:8000/admin 화면으로 가서 로그인하고 게시글을 쓴다.
+6. localhost:8000/admin 화면으로 가서 로그인하고 게시글을 쓴다.
 
 ![Screen Shot 2022-01-12 at 5 48 38 PM](https://user-images.githubusercontent.com/8315252/149094355-c0d5cb53-aeb3-4e12-ab44-ca6be3f51de6.png)
 
